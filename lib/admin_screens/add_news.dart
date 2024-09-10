@@ -16,14 +16,14 @@ class _UploadLatestNewsPageState extends State<UploadLatestNewsPage> {
     if (_titleController.text.isNotEmpty &&
         _descriptionController.text.isNotEmpty) {
       if (_editingNewsId == null) {
-        // If not editing, add new news
+        
         await _firestore.collection('latest_news').add({
           'title': _titleController.text,
           'description': _descriptionController.text,
           'timestamp': FieldValue.serverTimestamp(),
         });
       } else {
-        // If editing, update the news
+  
         await _firestore.collection('latest_news').doc(_editingNewsId).update({
           'title': _titleController.text,
           'description': _descriptionController.text,
