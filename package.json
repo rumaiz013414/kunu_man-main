@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "appium-flutter-driver": "^2.9.2",
+    "webdriverio": "^9.0.1"
+  }
+}
